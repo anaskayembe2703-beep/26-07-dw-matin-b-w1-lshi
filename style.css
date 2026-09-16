@@ -1,0 +1,602 @@
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+    --background: #0c182b;
+    --gold: #d8b33f;
+    --white: #ffffff;
+    --text-light: #d8d8d8;
+    --text-muted: #8d96a3;
+    --border: #566174;
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    width: 100%;
+    padding: 28px 5%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+/* Navigation */
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.nav-left a,
+.nav-right a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: var(--white);
+}
+
+
+/* Séparateur entre les liens */
+
+.nav-left li:not(:last-child)::after,
+.nav-right li:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    color: var(--gold);
+}
+
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    right: 0;
+
+    color: var(--gold);
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 680px;
+
+    margin: 35px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        190px
+        1px
+        100px
+        minmax(300px, 1fr)
+        400px;
+
+    column-gap: 30px;
+
+    align-items: center;
+}
+
+
+/* ==================================================
+   CONTACT INFORMATION
+================================================== */
+
+.contact-info {
+    height: 380px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-item h3,
+.social-section h3 {
+    color: var(--gold);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.contact-item a {
+    color: var(--gold);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--white);
+}
+
+
+/* ==================================================
+   SOCIAL LINKS
+================================================== */
+
+.social-section {
+    margin-top: 8px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.social-links a {
+    color: var(--gold);
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.social-links svg {
+    width: 38px;
+    height: 38px;
+}
+
+.social-links a:hover {
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   LIGNE VERTICALE
+================================================== */
+
+.vertical-line {
+    width: 1px;
+    height: 380px;
+
+    background-color: var(--border);
+}
+
+
+/* ==================================================
+   BONJOUR VERTICAL
+================================================== */
+
+.hello-container {
+    height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hello {
+    color: var(--white);
+
+    font-size: clamp(60px, 6vw, 100px);
+
+    font-weight: 700;
+
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+
+    line-height: 1;
+    margin-bottom: 120px;
+}
+
+
+/* ==================================================
+   INTRODUCTION
+================================================== */
+
+.intro {
+    max-width: 550px;
+}
+
+.intro-label {
+    color: var(--white);
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    display: none;
+}
+
+.intro-text {
+    max-width: 520px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+
+/* ==================================================
+   BOUTONS
+================================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    min-width: 190px;
+
+    padding: 18px 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    background-color: var(--gold);
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+
+    background-color: #e5c452;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.arrow {
+    font-size: 25px;
+    line-height: 1;
+}
+
+
+/* ==================================================
+   PHOTO DE PROFIL
+================================================== */
+
+.profile-container {
+    width: 100%;
+    max-width: 300px;
+
+    justify-self: end;
+}
+
+.profile-image {
+    width: 100%;
+    height: 500px;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 30px;
+
+    filter: grayscale(100%);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    width: 78%;
+
+    margin: 40px auto 30px;
+
+    text-align: center;
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--border);
+
+    margin-bottom: 28px;
+}
+
+.footer p {
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   TABLETTE
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        grid-template-columns:
+            150px
+            1px
+            80px
+            1fr
+            320px;
+
+        column-gap: 20px;
+    }
+
+    .profile-image {
+        height: 500px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 25px 6%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        position: static;
+        order: -1;
+
+        font-size: 25px;
+    }
+
+    .nav-left,
+    .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    /* Hero devient vertical */
+
+    .hero {
+        width: 88%;
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+
+        margin-top: 40px;
+
+        gap: 35px;
+
+        text-align: center;
+    }
+
+
+    /* Contact */
+
+    .contact-info {
+        height: auto;
+
+        width: 100%;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+    .contact-item {
+        margin-bottom: 0;
+    }
+
+
+    /* Cacher le séparateur */
+
+    .vertical-line {
+        display: none;
+    }
+
+
+    /* Bonjour */
+
+    .hello-container {
+        height: auto;
+    }
+
+    .hello {
+        writing-mode: horizontal-tb;
+
+        transform: none;
+
+        font-size: 70px;
+    }
+
+
+    /* Introduction */
+
+    .intro {
+        max-width: 100%;
+    }
+
+    .intro-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Boutons */
+
+    .hero-buttons {
+        align-items: center;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* Photo */
+
+    .profile-container {
+        max-width: 450px;
+
+        width: 100%;
+
+        justify-self: auto;
+    }
+
+    .profile-image {
+        height: 500px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        width: 88%;
+    }
+}
+
+
+/* ==================================================
+   PETITS TÉLÉPHONES
+================================================== */
+
+@media (max-width: 500px) {
+
+    .nav-left,
+    .nav-right {
+        gap: 7px;
+    }
+
+    .nav-left a,
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .nav-left li:not(:last-child)::after,
+    .nav-right li:not(:last-child)::after {
+        margin-left: 7px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .hello {
+        font-size: 58px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .profile-image {
+        height: 420px;
+        border-radius: 22px;
+    }
+}
