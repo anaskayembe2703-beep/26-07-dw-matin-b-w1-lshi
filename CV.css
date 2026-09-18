@@ -1,0 +1,375 @@
+/* VARIABLES*/
+:root {
+  --bleu-nuit: #101c30;
+  --dore: #c9aa59;
+  --blanc-casse: #f7f7f2;
+  --gris-clair: #d8d8d8;
+  --texte-fonce: #2a2a2a;
+  --texte-gris: #555;
+  --police: 'Montserrat', Arial, sans-serif;
+}
+
+/*-----RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--police);
+  background: #e8e8e8;
+  color: var(--texte-fonce);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/*------CONTENEUR A4 */
+.cv-container {
+  width: 210mm;
+  min-height: 297mm;
+  background: var(--blanc-casse);
+  display: grid;
+  grid-template-columns: 32% 68%;
+  border: 1px solid var(--dore);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/*----COLONNE GAUCHE-----*/
+.sidebar {
+  background: var(--bleu-nuit);
+  color: #fff;
+  padding: 30px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Photo de profil */
+.photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--dore);
+}
+
+/* Nom et titre */
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.job-title {
+  font-size: 11px;
+  color: var(--dore);
+  text-align: center;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+/* Rubriques de la sidebar */
+.sidebar-section {
+  border-top: 1px solid rgba(201, 170, 89, 0.4);
+  padding-top: 14px;
+}
+
+.sidebar-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dore);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+/* Petite ligne verticale dorée devant les titres */
+.sidebar-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 3px;
+  height: 12px;
+  background: var(--dore);
+}
+
+/* Contact */
+.contact-list {
+  list-style: none;
+  font-size: 8px;
+  color: var(--gris-clair);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Compétences */
+.skill-category {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  margin: 10px 0 5px;
+}
+
+.skill-list {
+  list-style: none;
+  font-size: 8px;
+  color: #94A3B8;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.skill-list li::before {
+  content: '•';
+  color: var(--dore);
+  margin-right: 6px;
+}
+
+/* Langues */
+.langue {
+  margin-bottom: 10px;
+}
+
+.langue-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: var(--gris-clair);
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: var(--dore);
+  border-radius: 2px;
+}
+
+/*-----COLONNE DROITE----*/
+.main-content {
+  background: #F4F4F0;
+  padding: 35px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.main-section {
+  border-bottom: 1px solid #e0ddd0;
+  padding-bottom: 18px;
+}
+
+.main-section:last-of-type {
+  border-bottom: none;
+}
+
+.main-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texte-fonce);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  padding-left: 10px;
+  position: relative;
+}
+
+/* Ligne verticale dorée devant les titres */
+.main-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 3px;
+  height: 13px;
+  background: var(--dore);
+}
+
+/* Éléments de la timeline (formation / expériences) */
+.timeline-item {
+  margin-bottom: 14px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background: var(--dore);
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texte-fonce);
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: var(--dore);
+  font-weight: 500;
+}
+
+.date {
+  font-size: 10.5px;
+  color: var(--texte-gris);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.missions-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--texte-fonce);
+  margin-top: 6px;
+}
+
+.missions-list {
+  list-style: none;
+  font-size: 10.5px;
+  color: var(--texte-gris);
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.missions-list li::before {
+  content: '•';
+  color: var(--dore);
+  margin-right: 6px;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 9px;
+  color: #999;
+  padding: 10px 5px;
+  border-top: 1px solid #e0ddd0;
+  background-color: #0F1B2D;
+  margin-bottom: 0px;
+}
+
+/*-----RESPONSIVE----*/
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .cv-container {
+    width: 100%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav{
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+ .main-nav a {
+    font-size: 11px;
+ }
+
+  .sidebar {
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .sidebar-section {
+    width: 100%;
+    text-align: left;
+  }
+
+  .sidebar-title,
+  .main-title {
+    text-align: left;
+  }
+
+  .contact-list,
+  .skill-list,
+  .missions-list {
+    text-align: left;
+  }
+
+  .main-content {
+    padding: 25px 22px;
+  }
+
+  .profile-text {
+    font-size: 12.5px;
+  }
+
+  .timeline-item h3 {
+    font-size: 13px;
+  }
+}
+
+/*--IMPRESSION--*/
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cv-container {
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: none;
+    border: none;
+    page-break-inside: avoid;
+  }
+
+  .main-section,
+  .sidebar-section,
+  .timeline-item {
+    page-break-inside: avoid;
+  }
+
+  /* Conserver les couleurs à l'impression */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

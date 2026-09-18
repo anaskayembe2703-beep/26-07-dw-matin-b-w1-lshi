@@ -1,0 +1,307 @@
+body {
+    background-color: #0a1424
+}
+
+/*----- HEADER -----*/
+   
+.header {
+    width: 100%;
+    padding: 28px 5%;
+    color: #d4af37;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* --- Navigation ----*/
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+.nav-right a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* ---- Séparateur entre les liens */
+.nav-right li:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    color: #d4af37;
+}
+
+/* --- Logo --- */
+.logo {
+    position: absolute;
+    right: 0;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-size: 700;
+    letter-spacing: 1px;
+
+}
+
+
+/*  PROJECTS PAGE */
+
+.projects {
+    padding: 70px 5% 80px;
+}
+
+/* INTRODUCTION */
+
+.projects-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.projects-intro h1 {
+    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    color: #aeb7c7;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.title-line {
+    width: 45px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 22px auto 0;
+}
+
+
+/* PROJECTS GRID */
+
+.projects-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+    display: flex;
+    min-height: 300px;
+
+    background-color: #101b2e;
+    border: 1px solid #1e3553;
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+/* PROJECT IMAGE */
+
+.project-card img {
+    width: 42%;
+    height: 100%;
+    min-height: 300px;
+
+    object-fit: cover;
+}
+
+
+/* PROJECT CONTENT */
+
+.project-content {
+    padding: 25px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-content h2 {
+    color: #d4af37;
+    font-size: 19px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.project-content p {
+    color: #b5bdca;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+
+/* TAGS */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    color: #c8d0dc;
+    border: 1px solid #34445c;
+    border-radius: 20px;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+}
+
+
+/* PROJECT LINK */
+
+.project-link {
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    margin-top: auto;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #0a1424;
+    border-top: 1px solid #1d3049;
+
+    padding: 35px 5%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-item h3 {
+    color: #ffffff;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-item p {
+    color: #aeb7c7;
+    font-size: 13px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #aeb7c7;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.social-links a:hover {
+    color: #d4af37;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+
+    color: #777f8d;
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .projects {
+        padding: 50px 20px;
+    }
+
+    .projects-intro h1 {
+        font-size: 32px;
+    }
+
+    .intro-text {
+        font-size: 14px;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 220px;
+        min-height: auto;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .copyright {
+        grid-column: auto;
+    }
+
+}

@@ -1,7 +1,4 @@
-/* ==================================================
-   VARIABLES
-================================================== */
-
+/* VARIABLES*/
 :root {
     --background: #0c182b;
     --gold: #d8b33f;
@@ -12,11 +9,9 @@
 }
 
 
-/* ==================================================
-   RESET
-================================================== */
-
-* {
+/*RESET */
+   
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,60 +28,47 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*---HEADER---- */
 
-/* ==================================================
-   HEADER
-================================================== */
-
-.header {
+.header{
     width: 100%;
-    padding: 28px 5%;
+    padding: 25px 5%;
 }
 
-.navbar {
+.navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
 
-
-/* Navigation */
-
-.nav-left,
-.nav-right {
+/* --- Navigation ---- */
+.nav-left {
     display: flex;
     align-items: center;
     gap: 10px;
     list-style: none;
 }
 
-.nav-left a,
-.nav-right a {
+.nav-left a {
     color: var(--gold);
     text-decoration: none;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 500px;
     transition: 0.3s ease;
 }
-
-.nav-left a:hover,
-.nav-right a:hover {
-    color: var(--white);
+.nav-left a:hover {
+     color: var(--white);
 }
 
-
-/* Séparateur entre les liens */
-
-.nav-left li:not(:last-child)::after,
-.nav-right li:not(:last-child)::after {
-    content: "|";
-    margin-left: 10px;
-    color: var(--gold);
+/* ----Séparateur entre les lignes ----*/
+.nav-left
+li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: var(--gold);
 }
 
-
-/* Logo */
 
 .logo {
     position: absolute;
@@ -94,10 +76,10 @@ body {
 
     color: var(--gold);
     text-decoration: none;
-
     font-size: 28px;
-    font-weight: 700;
+    font-size: 700;
     letter-spacing: 1px;
+
 }
 
 
@@ -127,9 +109,7 @@ body {
 }
 
 
-/* ==================================================
-   CONTACT INFORMATION
-================================================== */
+/*CONTACT INFORMATION */
 
 .contact-info {
     height: 380px;
@@ -173,9 +153,7 @@ body {
 }
 
 
-/* ==================================================
-   SOCIAL LINKS
-================================================== */
+/* SOCIAL LINKS*/
 
 .social-section {
     margin-top: 8px;
@@ -211,10 +189,8 @@ body {
 }
 
 
-/* ==================================================
-   LIGNE VERTICALE
-================================================== */
-
+/* LIGNE VERTICALE */
+   
 .vertical-line {
     width: 1px;
     height: 380px;
@@ -223,10 +199,8 @@ body {
 }
 
 
-/* ==================================================
-   BONJOUR VERTICAL
-================================================== */
-
+/* BONJOUR VERTICAL */
+   
 .hello-container {
     height: 380px;
 
@@ -243,7 +217,6 @@ body {
     font-weight: 700;
 
     writing-mode: vertical-rl;
-
     transform: rotate(180deg);
 
     line-height: 1;
@@ -251,9 +224,7 @@ body {
 }
 
 
-/* ==================================================
-   INTRODUCTION
-================================================== */
+/*----INTRODUCTION----*/
 
 .intro {
     max-width: 550px;
@@ -284,11 +255,8 @@ body {
 }
 
 
-/* ==================================================
-   BOUTONS
-================================================== */
-
-.hero-buttons {
+/* BOUTONS */
+   .hero-buttons {
     display: flex;
     gap: 15px;
 }
@@ -332,10 +300,8 @@ body {
 }
 
 
-/* ==================================================
-   PHOTO DE PROFIL
-================================================== */
-
+/* PHOTO DE PROFIL */
+    
 .profile-container {
     width: 100%;
     max-width: 300px;
@@ -359,10 +325,8 @@ body {
 }
 
 
-/* ==================================================
-   FOOTER
-================================================== */
-
+/* FOOTER */
+   
 .footer {
     width: 78%;
 
@@ -387,10 +351,8 @@ body {
 }
 
 
-/* ==================================================
-   TABLETTE
-================================================== */
-
+/* TABLETTE */
+   
 @media (max-width: 1100px) {
 
     .hero {
@@ -420,11 +382,9 @@ body {
 }
 
 
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 800px) {
+/* MOBILE */
+   
+ @media (max-width: 800px) {
 
     .header {
         padding: 25px 6%;
@@ -447,7 +407,6 @@ body {
         justify-content: center;
         flex-wrap: wrap;
     }
-
 
     /* Hero devient vertical */
 
@@ -556,9 +515,9 @@ body {
 }
 
 
-/* ==================================================
-   PETITS TÉLÉPHONES
-================================================== */
+/* ========PETITS TÉLÉPHONES==========*/
+   
+ 
 
 @media (max-width: 500px) {
 
